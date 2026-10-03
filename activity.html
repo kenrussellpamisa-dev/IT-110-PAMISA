@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Clover - HTML Practical Application</title>
+</head>
+
+<body>
+
+    <header id="main-header">
+
+        <h1>BLACK CLOVER</h1>
+
+        <p>
+            Magic, Friendship, Rivalry, and Determination
+        </p>
+
+        <nav>
+            <a href="#images">Images</a>
+            <a href="#hyperlinks">Hyperlinks</a>
+            <a href="#multimedia">Multimedia</a>
+            <a href="#useful-tags">Useful Tags</a>
+            <a href="#html-dom">HTML DOM</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- 1. IMAGES -->
+
+        <section id="images">
+
+            <h2>Images</h2>
+
+            <p>
+                Black Clover is a fantasy anime and manga series
+                about magic knights, friendship, rivalry, and dreams.
+            </p>
+
+            <figure>
+
+                <img
+                    src="images/ASTA.jpg"
+                    alt="Asta from Black Clover holding his sword"
+                    width="500"
+                >
+
+                <figcaption>
+                    Asta is the main character of Black Clover.
+                    He uses anti-magic despite being born without magic.
+                </figcaption>
+
+            </figure>
+
+            <h3>Yuno</h3>
+
+            <img
+                src="images/yuno.jpg"
+                alt="Yuno from Black Clover using wind magic"
+                width="400"
+            >
+
+            <p>
+                Yuno is Asta's childhood friend and rival.
+                He is a talented mage with strong wind magic.
+            </p>
+
+            <h3>Black Bulls</h3>
+
+            <img
+                src="images/BLACK BULLS.jpg"
+                alt="The Black Bulls Magic Knight squad"
+                width="500"
+            >
+
+            <p>
+                The Black Bulls are a Magic Knight squad known
+                for their unique members and powerful abilities.
+            </p>
+
+        </section>
+
+
+        <!-- 2. HYPERLINKS -->
+
+        <section id="hyperlinks">
+
+            <h2>Hyperlinks</h2>
+
+            <p>
+                Hyperlinks allow users to navigate to another section
+                of the project, visit an external website, send an
+                email, or jump to a specific part of the webpage.
+            </p>
+
+            <h3>Internal Link</h3>
+
+            <p>
+                <a href="activity.html#useful-tags">
+                    Go to the Useful Tags section
+                </a>
+            </p>
+
+            <h3>External Link</h3>
+
+            <p>
+                <a
+                    href="https://en.wikipedia.org/wiki/Black_Clover"
+                    target="_blank"
+                >
+                    Learn More About Black Clover
+                </a>
+            </p>
+
+            <h3>Email Link</h3>
+
+            <p>
+                <a href="mailto:blackclover@example.com">
+                    Send an Email
+                </a>
+            </p>
+
+            <h3>Same-Page Anchor Link</h3>
+
+            <p>
+                <a href="#html-dom">
+                    Jump to the HTML DOM Section
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- 3. MULTIMEDIA -->
+
+        <section id="multimedia">
+
+            <h2>Multimedia</h2>
+
+            <p>
+                HTML5 allows audio and video files to be added
+                directly to a webpage.
+            </p>
+
+            <h3>Black Clover Audio</h3>
+
+            <audio controls>
+
+                <source
+                    src="media/Black Clover Song.mp3"
+                    type="audio/mpeg"
+                >
+
+                Your browser does not support the audio element.
+
+            </audio>
+
+            <h3>Black Clover Video</h3>
+
+            <video controls width="600">
+
+                <source
+                    src="media/Black Clover Vid.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support the video element.
+
+            </video>
+
+        </section>
+
+
+        <!-- 4. USEFUL TAGS -->
+
+        <section id="useful-tags">
+
+            <h2>Useful Tags</h2>
+
+            <!-- The <blockquote> tag is used to display a longer quotation. -->
+            <blockquote>
+                Asta's journey represents determination,
+                friendship, and never giving up on his dream.
+            </blockquote>
+
+            <!-- The <abbr> tag provides additional information about an abbreviation. -->
+            <p>
+                <abbr title="Black Bulls">BB</abbr>
+                is the Magic Knight squad where Asta belongs.
+            </p>
+
+            <!-- The <mark> tag is used to highlight important information. -->
+            <p>
+                Asta's main ability is
+                <mark>Anti-Magic</mark>,
+                which allows him to fight against magic.
+            </p>
+
+            <p>
+                &copy; 2026 Black Clover HTML Activity
+            </p>
+
+        </section>
+
+
+        <!-- 5. HTML DOM -->
+
+        <section id="html-dom">
+
+            <h2 id="dom-heading">HTML DOM</h2>
+
+            <p id="dom-description">
+                The HTML Document Object Model, or DOM,
+                represents a webpage as a tree of elements.
+                Each element can have a parent and child elements.
+            </p>
+
+            <div id="dom-example">
+
+                <h3>Black Clover DOM Structure</h3>
+
+                <ul>
+                    <li>Asta</li>
+                    <li>Yuno</li>
+                    <li>Black Bulls</li>
+                    <li>Magic Knights</li>
+                    <li>Wizard King</li>
+                </ul>
+
+            </div>
+
+            <img
+                src="dom-tree.png"
+                alt="Screenshot of the HTML DOM tree showing nested Black Clover webpage elements"
+                width="700"
+            >
+
+            <p>
+                The screenshot above shows the HTML DOM tree
+                of this Black Clover webpage.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Black Clover HTML Practical Application Activity
+        </p>
+
+        <p>
+            &copy; 2026
+        </p>
+
+    </footer>
+
+
+    <!--
+    The body element is the parent of the header, main, and footer elements.
+    The images section is the parent of the figure element, while the figure
+    element is the parent of the img and figcaption elements.
+    The div element in the HTML DOM section is the parent of the h3 and ul elements.
+    The ul element is the parent of its li elements.
+    -->
+
+</body>
+</html>

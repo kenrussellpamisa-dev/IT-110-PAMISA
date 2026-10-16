@@ -1,0 +1,195 @@
+/*1. RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*2. BASE / TYPOGRAPHY  (brown and light gray theme) */
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  font-size: 1rem;                       /* rem unit */
+  background-color: lightgray;           /* color name */
+  color: #3e2a22;
+  line-height: 1.65;
+}
+
+h1, h2 {                                 /* grouping selector */
+  font-weight: bold;
+  color: brown;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: white;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 1.3em;                      /* em unit */
+  margin-bottom: 10px;
+  color: #5d4037;                        /* hex color */
+}
+
+/*3. LAYOUT (header, footer, main)*/
+header,
+footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 32px;
+}
+
+header {
+  background-color: #5d4037;
+  border-bottom: 6px solid #a1887f;
+}
+
+footer {
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  background-color: rgba(93, 64, 55, 0.15);     /* rgba color */
+}
+
+main {
+  width: 100%;                           /* % unit */
+}
+
+/*4. COMPONENTS*/
+
+/* ---- Cards ----
+   Total rendered width of one .card:
+   box-sizing is border-box, so the 500px width already includes the
+   padding and border. Total = 500px
+   (content area = 500 - 2*24 padding - 2*2 border = 448px).
+   Margins and the offset box-shadow are outside the box and are not
+   counted. */
+.card {
+  width: 500px;
+  padding: 24px;
+  border: 2px solid #5d4037;             /* width, style, color in one line */
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  box-shadow: 6px 6px 0 #a1887f;         /* bold offset shadow */
+  margin: 0 auto;                        /* center horizontally */
+  margin-bottom: 32px;                   /* space between cards */
+}
+
+/* Descendant selector */
+.card p {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* ---- CASCADE DEMO ----
+   Two rules target the intro color:
+     "#about .intro" -> specificity (1,1,0)  color: #5d4037 (dark brown)
+     ".intro"        -> specificity (0,1,0)  color: brown
+   "#about .intro" WINS because an ID outweighs a class. It is written
+   FIRST and ".intro" comes later, yet the ID rule still wins, which
+   shows that specificity is checked before order. */
+#about .intro {
+  color: #5d4037;
+}
+
+.intro {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: brown;                          /* loses to #about .intro */
+}
+
+/* Pseudo-element: bigger first letter of the intro */
+.intro::first-letter {
+  font-size: 1.7rem;
+  color: #8d6e63;
+}
+
+/* ID selector + positioning */
+#about {
+  position: relative;
+  border-color: brown;
+  box-shadow: 6px 6px 0 #8d6e63;
+}
+
+/* Badge in the top-right corner of #about */
+#about::after {
+  content: "PROFILE";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #5d4037;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+
+/* ---- Navigation ---- */
+nav a {
+  display: inline-block;                 /* lets padding and width work */
+  padding: 8px 18px;
+  margin: 4px;
+  background-color: lightgray;
+  color: #3e2a22;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Pseudo-class */
+nav a:hover {
+  background-color: #a1887f;
+  color: white;
+}
+
+/* ---- Skills list (flexbox) ---- */
+.skills-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  list-style: none;
+}
+
+/* Child selector: each li styled like a small tag */
+.skills-list > li {
+  background-color: #e0e0e0;
+  color: #5d4037;
+  border: 1px solid #a1887f;
+  padding: 4px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/*5. DISPLAY AND VISIBILITY*/
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+/* Difference: .hide-none is removed from the layout completely, so the
+   next paragraph moves up and no gap appears. .hide-visibility is only
+   invisible; it still takes up its space, so an empty gap is left. */
+
+/* Fixed height + scrollbar */
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+}
+
+/*REFLECTION ANSWERS
+   1. The "#about .intro" rule won over ".intro" because of
+      specificity. An ID selector counts for more than a class, so
+      (1,1,0) beats (0,1,0). It won even though ".intro" is written
+      later; order only decides when specificity is tied.
+
+   2. With content-box, the 500px width would cover only the content,
+      so padding and border are added on top:
+      500 + (24 x 2 padding) + (2 x 2 border) = 500 + 48 + 4 = 552px.
+
+   3. I would use visibility: hidden when the layout should not shift,
+      such as a message that appears later in the same spot. I would
+      use display: none when the element should take up no space.
+   */

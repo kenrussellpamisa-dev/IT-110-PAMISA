@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="logo">CampusHub</h1>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#profile" class="nav-link active" data-target="profile">Profile</a>
+      <a href="#about" class="nav-link" data-target="about">About</a>
+      <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+    </nav>
+    <div class="theme-control">
+      <label for="theme-toggle" id="theme-text" class="theme-text">Dark mode</label>
+      <label class="switch" title="Toggle dark mode">
+        <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section id="profile" class="panel active">
+      <article class="card">
+        <div class="avatar">K</div>
+        <h2 class="name">Ken Russell Pamisa</h2>
+        <p class="course">BS Information Technology, 2nd Year</p>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <div class="actions">
+          <button id="like-btn" class="btn btn-primary" type="button">
+            &hearts; Like <span id="like-count" class="badge">0</span>
+          </button>
+          <button id="reset-btn" class="btn btn-outline" type="button">Reset</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="panel">
+      <article class="card">
+        <h2 class="name">About</h2>
+        <p class="course">Ken is a 2nd year IT student who enjoys building websites with HTML, CSS and JavaScript.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="panel">
+      <article class="card">
+        <h2 class="name">Contact</h2>
+        <p class="course">kenrussell.pamisa@campushub.example</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CampusHub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
